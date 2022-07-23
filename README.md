@@ -24,6 +24,11 @@ _G.outlines.create()
 _G.outlines.clear()
 ```
 
+cop the code by pasting everything in hax.lua or running this code
+```
+loadstring(game:HttpGet("https://raw.githubusercontent.com/strawgod/gitgud/main/hax.lua"))()
+```
+
 would say i made it for educational purposes but i'd be lying. it's fun using this stuff.
 and as a guy who's trying to make games himself, if you don't have countermeasures in place
-for hackers, you're not trying hard enough.
+to prevent something as simple as this, you obviously don't care enough
