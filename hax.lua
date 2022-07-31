@@ -105,10 +105,12 @@ _G.aimbot.enable = function()
 			end
 		end
 	end)
+	UserInputService.MouseBehavior = Enum.MouseBehavior.LockCenter
 end
 
 _G.aimbot.disable = function()
 	RunService:UnbindFromRenderStep"hax"
+	UserInputService.MouseBehavior = Enum.MouseBehavior.Default
 end
 
 _G.aimbot.enable()
