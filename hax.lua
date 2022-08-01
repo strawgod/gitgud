@@ -89,15 +89,15 @@ end
 UserInputService.InputBegan:Connect(function(input)
 	if input.UserInputType == _G.aimbot.inputType then
 		holding = true
-		previousbehavior = UserInputService.MouseBehavior
-		UserInputService.MouseBehavior = Enum.MouseBehavior.LockCenter
+		--previousbehavior = UserInputService.MouseBehavior
+		--UserInputService.MouseBehavior = Enum.MouseBehavior.LockCenter
 	end
 end)
 
 UserInputService.InputEnded:Connect(function(input)
 	if input.UserInputType == _G.aimbot.inputType then
 		holding = false
-		UserInputService.MouseBehavior = previousbehavior
+		--UserInputService.MouseBehavior = previousbehavior
 	end
 end)
 
