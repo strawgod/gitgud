@@ -8,6 +8,8 @@ local outlines = {}
 
 local Camera = workspace.CurrentCamera
 
+local previousbehavior = nil
+
 local onPlayerAdded = function(player)
 	if player == Players.LocalPlayer then
 		return
@@ -87,12 +89,15 @@ end
 UserInputService.InputBegan:Connect(function(input)
 	if input.UserInputType == _G.aimbot.inputType then
 		holding = true
+		previousbehavior = UserInputService.MouseBehavior
+		UserInputService.MouseBehavior = Enum.MouseBehavior.LockCenter
 	end
 end)
 
 UserInputService.InputEnded:Connect(function(input)
 	if input.UserInputType == _G.aimbot.inputType then
 		holding = false
+		UserInputService.MouseBehavior = previousbehavior
 	end
 end)
 
@@ -105,12 +110,10 @@ _G.aimbot.enable = function()
 			end
 		end
 	end)
-	UserInputService.MouseBehavior = Enum.MouseBehavior.LockCenter
 end
 
 _G.aimbot.disable = function()
 	RunService:UnbindFromRenderStep"hax"
-	UserInputService.MouseBehavior = Enum.MouseBehavior.Default
 end
 
 _G.aimbot.enable()
