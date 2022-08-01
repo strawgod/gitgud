@@ -8,7 +8,7 @@ local outlines = {}
 
 local Camera = workspace.CurrentCamera
 
-local previousbehavior = nil
+local previousbehavior = Enum.MouseBehavior.Default
 
 local onPlayerAdded = function(player)
 	if player == Players.LocalPlayer then
